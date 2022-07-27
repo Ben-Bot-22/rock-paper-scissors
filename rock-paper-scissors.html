@@ -1,12 +1,96 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>Rock, Paper, Scissors</title>
-</head>
-<body>
-    <script>
-        
-    </script>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/uvh3rqy.css" />
+    <script
+      src="https://kit.fontawesome.com/5674a25cc3.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Rock Paper Scissors</h1>
+      <h2 id="instruction">Choose your weapon</h2>
+        <span class="has-hover-card">
+            <i class="fa-solid fa-circle-question info-icon"></i>
+            <span class="info-card">
+                Best of 5 rounds wins<br>
+                <div><i class="fa-solid fa-scroll"></i> beats <i class="fa-solid fa-mountain"></i><br></div>
+                <div><i class="fa-solid fa-mountain"></i> beats <i class="fa-solid fa-scissors"></i><br></div>
+                <div><i class="fa-solid fa-scissors"></i> beats <i class="fa-solid fa-scroll"></i><br></div>
+            </span>
+        </span>
+
+      <div class="game-container">
+        <div class="gameover-modal">
+          <div class="gameover-modal-content">
+            <p id="gameover-message">this is the text inside the modal</p>
+            <button id="play-again-btn">
+                Play Again
+            </button>
+          </div>
+        </div>
+        <div class="you-column">
+          <div class="label">
+            <i class="fa-solid fa-user you-icon"></i>
+            <p class="you-label">You</p>
+          </div>
+          <div class="options player">
+            <button class="rps-icons player-icon rock player-button">
+              <i class="fa-solid fa-mountain rps-icon"></i>
+              <p>Rock</p>
+            </button>
+            <button class="rps-icons player-icon paper player-button">
+              <i class="fa-solid fa-scroll rps-icon"></i>
+              <p>Paper</p>
+            </button>
+            <button class="rps-icons player-icon scissors player-button">
+              <i class="fa-solid fa-scissors rps-icon"></i>
+              <p>Scissors</p>
+            </button>
+          </div>
+          <h3 class="you-blue" id="you-score">Score: 0</h3>
+        </div>
+
+        <div class="bot-column">
+          <div class="label">
+            <div>
+              <i class="fa-solid fa-robot bot-icon"></i>
+              <p class="bot-label">Bot</p>
+            </div>
+          </div>
+          <div class="options computer">
+            <div class="rps-icons rock bot-button">
+              <i class="fa-solid fa-mountain rps-icon"></i>
+              <p>Rock</p>
+            </div>
+            <div class="rps-icons paper bot-button">
+              <i class="fa-solid fa-scroll rps-icon"></i>
+              <p>Paper</p>
+            </div>
+            <div class="rps-icons scissors bot-button">
+              <i class="fa-solid fa-scissors rps-icon"></i>
+              <p>Scissors</p>
+            </div>
+          </div>
+          <h3 class="bot-red" id="bot-score">Score: 0</h3>
+        </div>
+      </div>
+
+      <!-- <p>First to 5 wins the game</p> -->
+      <h2 class="round-count">Round: 0 of 5</h2>
+      <footer>
+        <p>
+          Made with <span class="bot-red">&#9829;</span> by
+          <a href="https://github.com/Ben-Bot-22">Ben-Bot-22</a>
+        </p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>
+
+<!-- <i class="fa-solid fa-burst"></i> -->

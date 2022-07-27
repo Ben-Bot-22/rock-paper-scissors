@@ -1,0 +1,242 @@
+:root {
+  --orange: #ffb730;
+  --blue: #3db2ff;
+  --red: #ff2442;
+}
+
+* {
+  font-family: droog, sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  word-spacing: 10px;
+}
+
+button {
+  border: none;
+  color: lightgray;
+  background-color: transparent;
+}
+
+body {
+  background-color: #fff8f0;
+  color: var(--orange);
+}
+
+a {
+  text-decoration: none;
+  color: var(--blue);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.you-label {
+  color: var(--blue);
+  margin: 0 auto;
+}
+
+.you-icon {
+  color: var(--blue);
+  font-size: 25px;
+}
+
+.bot-icon {
+  color: var(--red);
+  font-size: 25px;
+  transition: all 0.05s ease-in-out;
+}
+
+.bot-label {
+  color: var(--red);
+  margin: 0 auto;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-icon {
+  color: lightgray;
+  font-size: 25px;
+  transition: all 0.05s ease-in-out;
+}
+
+.info-icon:hover {
+  color: var(--blue);
+  transform: scale(1.5);
+}
+
+.bot-icon-highlight {
+  color: var(--red);
+  transform: scale(1.5);
+}
+
+.rps-icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.player-icon {
+  transition: all 0.05s ease-in-out;
+}
+
+.player-icon:hover {
+  color: var(--blue);
+  transform: scale(1.5);
+}
+
+.rps-icons > p {
+  margin: 0;
+}
+
+.rps-icon {
+  font-size: 32px;
+}
+
+.game-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  border-radius: 10px;
+  padding: 10px;
+  color: lightgray;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px; /* Height of the footer */
+  display: flex;
+  justify-content: center;
+}
+
+#instruction {
+  display: flex;
+  align-self: center;
+}
+
+.player {
+  border: 3px solid var(--blue);
+  color: var(--blue);
+}
+
+.computer {
+  border: 3px solid var(--red);
+  /* color: var(--red); */
+}
+
+.you-blue {
+  color: var(--blue);
+}
+
+.bot-red {
+  color: var(--red);
+}
+
+/* Modal: Info hover card */
+
+.gameover-modal {
+  display: none;
+  position: fixed;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.gameover-modal-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* position: relative;  */
+  background-color: white;
+  font-size: 24px;
+  padding: 20px;
+  margin: auto;
+  width: 50%;
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+  border-radius: 10px;
+}
+#play-again-btn {
+  background-color: var(--orange);
+  color: white;
+  font-size: 24px;
+  border-radius: 5px;
+  transition: all 0.05s ease-in-out;
+}
+#play-again-btn:hover {
+  transform: scale(1.2);
+}
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+/* info hover card */
+
+.has-hover-card {
+  display: inline-block;
+  position: relative;
+
+}
+
+.info-card {
+  display: none;
+  background: white;
+  color: var(--blue);
+  border: 2px solid var(--blue);
+  padding: 10px;
+  position: absolute;
+  top: 1em;
+  left: -8em;
+  white-space: nowrap;
+  border-radius: 5px;
+}
+
+.has-hover-card:hover .info-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
